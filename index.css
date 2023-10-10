@@ -1,0 +1,274 @@
+*{
+    box-sizing: border-box; /* // para que las cajas no aumenten su tamaño */
+}
+html{
+    scroll-behavior: smooth;
+}
+h1 { font-size: 3em; }
+h2 { font-size: 2.5em; }
+h3 { font-size: 2em; }
+p { font-size: 1.25em; }
+ul{ list-style: none; }
+li{ font-size: 1.25em;}
+
+body{
+    margin: 0; /* quita los margenes a todo el doc */
+    font-family: cursive;
+    background-color: rgb(245, 255, 250)
+
+}
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 2px solid black;
+    box-shadow: 2px 2px 10px black;
+    color: white;
+    background-color:tomato;
+
+}
+
+button:hover{
+    background-color: orange;
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(245, 245, 241);
+}
+header .logo{
+    margin: 0;
+    padding: 20px 30px;
+    font-weight: bold;
+    color: tomato;
+    font-size: 2em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    padding-bottom: 30px;
+    
+}
+
+header a{
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+header a:hover{
+    color: tomato;
+}
+
+#login-in{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    color:azure;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)
+    )
+    ,url("/media/login-in.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+}
+
+#about-us .container{
+    text-align: center;
+    padding: 150px 10px;
+}
+.text-us{ color: tomato; }
+#our-content{
+    background-color: rgb(30, 30, 30);
+    color: azure;
+    text-align: center;
+}
+
+#our-content .container{ padding: 100px 0px; }
+#our-content p{
+    display: none;
+}
+
+#our-content h2{
+    margin-top: 0;
+}
+
+#our-content .card{
+    background-size: cover;
+    background-position: center center;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* selecciona la primera card */
+.card:first-child{
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+    url('/media/card-1.jpg');
+    
+}
+.card:nth-child(2){
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+    url('/media/card-2.jpg');
+   
+}
+.card:nth-child(3){
+    background-image: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+    url('/media/card-3.jpg');
+    
+}
+#our-services .container{
+    text-align:  center;
+    padding: 200px 10px;
+}
+
+#our-services li{
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.watch-now{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: azure;
+    height: 80vh;
+}
+.watch-now h2{
+    font-size: 5em;
+    font-size: 9vw;
+}
+.watch-now  button{
+    font-size: 3vw;
+}
+
+footer{
+    background-color: rgb(245, 245, 241);
+}
+footer .container{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+footer p{
+    margin: 0;
+    color: darkgrey;
+    padding: 10px;
+    
+}
+@media(min-width:720px){
+    header{
+        position: fixed;/*  siempre que se utiliza fizxed se debe asigna el width al 100ps */
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 30px;
+    }
+
+    #about-us .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #about-us .img-container{  
+        background-image: linear-gradient(0deg,rgba(0,0,0,0.0),rgba(0,0,0,0.0)),
+        url('/media/about-us.png');
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+
+     }
+     #about-us .parrafo{
+        width: 50%;
+        text-align: initial;
+        padding: 0px 30px;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        justify-content: center;
+     }
+     #about-us h2{
+        margin-top: 0px;
+     }
+     #our-content .content{
+        display: flex;
+        justify-content: center;
+     }
+     #our-content p{
+        display: block;
+        margin-bottom: 40px;
+     }
+     #our-content .card{
+        padding: 50px;
+        background-size: 100% 100px;
+        background-repeat: no-repeat;
+        background-position-y:0 ;
+        background-color: rgb(41,41,41);
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+     }
+     #our-content h3{
+        margin-top: 0;
+     }
+
+     #our-services{
+        background-image: url('/media/our-services.jpg');
+        background-repeat: no-repeat;
+        background-size: 500px 500px;
+        background-position: calc(100vw - 700px)  100px;
+     }
+     #our-services .container{
+        text-align: initial;
+     }
+     #our-services ul{
+        margin-left: 100px;
+     }
+     #our-services h2{
+        text-align: center;
+     }
+     #watch-now h2{
+        font-size: 4em;
+     }
+     #watch-now button{
+        font-size: 2em;
+     }
+     footer .container{
+        justify-content: flex-end;
+     }
+    }
+
+@media(min-width: 1200px){
+     #our-services{
+        background-position-x: calc(100vw - 700px) ;
+     }
+}
